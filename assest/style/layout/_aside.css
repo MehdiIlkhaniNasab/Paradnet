@@ -11,13 +11,13 @@ aside{
 .aside__wrapper{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 2rem 3rem;
 }
 
 .profile__img{
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
     height: auto;
     background-color: red;
     border-radius: 50%;
@@ -37,7 +37,7 @@ aside{
 .menu-list{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem 4rem;
 }
 
@@ -110,5 +110,29 @@ aside{
 
 .social__item svg{
     width: 100%;
+    height: 100%;
     fill:  currentColor;
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+    .sidebar__right{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {}
+
+@media only screen and (max-width: 48em) {
+    
+    
+}
+
+@media only screen and (max-width: 37.5em) {
+    
 }
