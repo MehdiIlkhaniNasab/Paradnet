@@ -1,0 +1,45 @@
+aside{
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    background: var(--gradient-box-w);
+}
+
+.aside__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 3rem;
+}
+
+.profile__img{
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 5px solid var(--color-white);
+}
+
+.profile__img img{
+    width: 100%;
+ 
+    object-fit: cover;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu__item{
+    
+}

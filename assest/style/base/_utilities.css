@@ -1,0 +1,23 @@
+.u-text-red{
+    color: var(--color-primary);
+}
+
+.u-container{
+    width: 75%;
+    margin-right: auto;
+}
+
+.shadow-1{
+    box-shadow: var(--shadow-1);
+}
+.shadow-2{
+    box-shadow: var(--shadow-2);
+}
+
+.inner-shadow{
+    box-shadow: var(--inner-shadow);
+}
+
+.shadow-white-3{
+    box-shadow: var(--shadow-white-3);
+}
