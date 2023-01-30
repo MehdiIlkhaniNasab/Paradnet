@@ -7,29 +7,7 @@
     margin-right: auto;
 }
 
-.shadow-1{
-    box-shadow: var(--shadow-1);
-}
-.shadow-2{
-    box-shadow: var(--shadow-2);
-}
 
-.inner-shadow{
-    box-shadow: var(--inner-shadow);
-}
-
-.shadow-white-3{
-    box-shadow: var(--shadow-white-3);
-}
-
-/* Responsive */
-@media only screen and (max-width: 75em) {
-
-    .u-container{
-        width: 100%;
-    }
-
-}
 
 @media only screen and (max-width: 62em) {}
 
