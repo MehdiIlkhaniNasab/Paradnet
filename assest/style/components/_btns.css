@@ -13,6 +13,8 @@
 
 .btn:hover{
     transform: translateY(-5px);
-    background: linear-gradient(145deg, #1e2024, #23272b);
+}
 
+.btn-black:hover{ 
+    background: linear-gradient(145deg, #1e2024, #23272b);
 }
