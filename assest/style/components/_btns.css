@@ -1,6 +1,9 @@
 .btn{
-    display: inline-block;
-    padding: 1.7rem 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 5rem;
     border-radius: 6px;
     transition: var(--transition);
 }

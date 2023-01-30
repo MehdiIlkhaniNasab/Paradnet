@@ -68,3 +68,48 @@
     opacity: 1 !important;
     color: var(--color-white);
 }
+
+.navbar-menu{
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-menu svg{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+    .navbar-menu{
+        display: block;
+    }
+    .navbar__left{
+        display: none;
+    }
+    .navbar__right{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+
+    
+}
+
+@media only screen and (max-width: 37.5em) {
+
+}
