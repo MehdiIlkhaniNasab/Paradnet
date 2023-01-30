@@ -12,6 +12,7 @@
     --shadow-white-3: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
     --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
     --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+    --transition: all 0.5s;
     --color-heading: #ffffff;
     --color-heading-wv: #1e2125;
     --color-body: #878e99;
@@ -39,5 +40,6 @@
     --color-discord: #7289da;
     --font-primary: "shabnam", sans-serif;
     --font-secondary: "shabnam", sans-serif;
+    --font-size-primary: 1.6rem;
 
 }

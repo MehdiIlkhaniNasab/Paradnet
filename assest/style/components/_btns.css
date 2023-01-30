@@ -1,0 +1,18 @@
+.btn{
+    display: inline-block;
+    padding: 1.7rem 1.9rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.btn-black{
+    background: linear-gradient(-145deg, #1e2024, #23272b);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-1);
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, #1e2024, #23272b);
+
+}
