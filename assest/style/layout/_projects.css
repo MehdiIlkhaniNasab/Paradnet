@@ -6,9 +6,11 @@
 }
 
 .projects__wrapper {
+    border-bottom: 2px solid var(--color-tertiary);
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    padding-bottom: 10rem;
 }
 
 .examples {

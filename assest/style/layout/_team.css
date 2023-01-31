@@ -2,15 +2,16 @@
     width: 100%;
     height: auto;
     color: var(--color-lightn);
-    padding: 5rem 0 10rem;
-    border-bottom: 2px solid var(--color-tertiary);
+    padding: 5rem 0 0;
 }
 
 
 .team__wrapper {
+    border-bottom: 2px solid var(--color-tertiary);
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    padding-bottom: 10rem;
 }
 
 
