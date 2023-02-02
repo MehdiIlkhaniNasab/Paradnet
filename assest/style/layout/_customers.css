@@ -67,6 +67,14 @@
 
 }
 
+.customers-tab{
+    display: none;
+}
+
+.customers-tab.active{
+    display: block;
+}
+
 .customers-list {
     width: auto;
     height: 100%;
