@@ -2,6 +2,7 @@ var studentCommentSwiper = new Swiper('.comments-swiper', {
 
     loop: true,
     grabCursor: true,
+    autoplay:true,
     breakpoints: {
       350: {
         slidesPerView: 1,
