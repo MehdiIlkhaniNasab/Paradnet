@@ -13,7 +13,7 @@
 
 .resume-tabs-btn-box {
     width: 100%;
-    height: 10rem;
+    height: auto;
     border-radius: 10px;
     background: var(--background-color-1);
     box-shadow: var(--shadow-1);
@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3rem;
 }
 
 .resume-tabs-btn-box a.active {
@@ -52,6 +53,8 @@
     justify-content: space-between;
     padding: 2rem;
     display: none;
+    flex-wrap: wrap;
+
 }
 
 .resume-tab-content.active {
@@ -210,4 +213,42 @@
     height: 100%;
     border-radius: 14px;
     background: linear-gradient(-145deg, #f02981 0%, #c81901 100%);
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+    .resume-tabs-btn-box {
+        flex-direction: column;
+    }
+
+    .resume-tabs-btn-box a {
+        width: 100%;
+    }
+
+    .resume-tab-content-right,
+    .resume-tab-content-left {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 48em) {}
+
+@media only screen and (max-width: 37.5em) {
+    .resume-tab-content-box-top {
+        flex-direction: column;
+        align-items: start;
+        gap: 3rem;
+    }
 }

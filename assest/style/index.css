@@ -11,6 +11,7 @@
 
 /* Layout Css */
 @import url(layout/_blog.css);
+@import url(layout/_contact.css);
 @import url(layout/_description.css);
 @import url(layout/_header.css);
 @import url(layout/_navbar.css);
@@ -19,3 +20,4 @@
 @import url(layout/_team.css);
 @import url(layout/_comments.css);
 @import url(layout/_customers.css);
+@import url(layout/_footer.css);
