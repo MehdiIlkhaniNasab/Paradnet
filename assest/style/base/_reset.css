@@ -31,6 +31,11 @@ textarea{
   font-size: inherit;
 }
 
+input::placeholder,
+textarea::placeholder{
+  color: currentColor;
+}
+
 button{
   cursor: pointer;
 }
