@@ -69,11 +69,18 @@
 }
 
 .customers-tab{
-    display: none;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: var(--transition);
 }
 
 .customers-tab.active{
-    display: block;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
 }
 
 .customers-list {

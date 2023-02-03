@@ -6,4 +6,5 @@ body{
     font-family: var(--font-primary);
     font-size: var(--font-size-primary);
     background-color: var(--background-color-2);
+    position: relative;
 }

@@ -34,54 +34,260 @@
 
 }
 
-.blog-item figure{
+.blog-item figure {
     height: 75%;
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.blog-item figure img{
+.blog-item figure img {
     width: 100%;
     height: 100%;
     transition: all 0.5s;
 
 }
 
-.blog-info{
+.blog-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
 }
 
-.likes-box{
+.likes-box {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.likes-box svg{
+.likes-box svg {
     display: inline-block;
     width: 2rem;
     height: 2rem;
     fill: var(--color-primary);
 }
 
-.blog-item h3{
+.blog-item h3 {
     font-size: 2rem;
     transition: all 0.5s;
 
 }
 
-.blog-item:hover{
+.blog-item:hover {
     transform: translateY(-1rem);
 }
 
-.blog-item:hover img{
+.blog-item:hover img {
     transform: scale(1.09);
 }
 
-.blog-item:hover h3{
+.blog-item:hover h3 {
+    color: var(--color-primary);
+}
+
+.modal-blog {
+    width: 100%;
+    height: 100%;
+    background: #212428;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: var(--color-lightn);
+
+}
+
+.modal-blog.active{
+    opacity: 1;
+    visibility: 1;
+    transform: scale(1);
+}
+
+.modal-blog-container{
+    width: 100%;
+    height: 100%;
+    padding: 5rem 10rem;
+    overflow-y: auto;
+}
+
+.modal-blog-wrapper{
+    position: relative;
+    padding: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    z-index: 1;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.modal-blog-top,
+.modal-blog-bottom{
+    margin: 0 auto;
+    width: 90%;
+    height:  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.modal-blog-bottom{
+    align-items: flex-start;
+}
+
+.modal-blog-bottom h2{
+    font-size: 2.5rem;
+}
+
+.form-comment{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.form-comment > div{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.form-comment-right,
+.form-comment-left{
+    width: calc(50% - 0.5rem);
+}
+
+.form-comment-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+
+.input-comment-box input,
+.input-comment-box textarea {
+    background-color: #191b1e;
+    border-radius: 6px;
+    width: 100%;
+    height: 5.5rem;
+    transition: var(--transition);
+    border: 2px solid #191b1e;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--inner-shadow);
+    transition: var(--transition);
+    border-color:  transparent;
+    outline: none;
+}
+
+.input-comment-box textarea{
+    min-height: 20rem;
+}
+
+.input-comment-box input:focus,
+.input-comment-box textarea:focus {
+    background-color: #191b1e;
+    color: var(--color-light);
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+.modal-blog-top figure{
+    width: 100%;
+    height: 50rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+
+.modal-blog-top figure img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.modal-blog-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal-blog-text p{
+    font-size: 1.9rem;
+    opacity: 0.5;
+    text-align: justify;
+}
+
+.modal-blog-text h1{
+    font-size: 2.5rem;
+}
+
+.modal-blog-description-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.blog-btn {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blog-btn a {
+    display: flex;
+    gap: 1rem;
+    width: 13rem;
+}
+
+.blog-btn a span {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-btn svg {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+}
+
+.blog-icon-close {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: linear-gradient(-145deg, #1e2024, #23272b);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-1);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.blog-icon-close svg{
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+}
+
+.blog-icon-close:hover{
     color: var(--color-primary);
 }

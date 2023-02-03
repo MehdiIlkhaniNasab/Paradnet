@@ -52,13 +52,19 @@
     gap: 2rem;
     justify-content: space-between;
     padding: 2rem;
-    display: none;
     flex-wrap: wrap;
-
+    transition: var(--transition);
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
 }
 
 .resume-tab-content.active {
-    display: flex;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
 }
 
 .resume-tab-content-right,
