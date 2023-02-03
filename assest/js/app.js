@@ -4,7 +4,8 @@ let projecticonclose = document.querySelector('.project-icon-close')
 let blogiconclose = document.querySelector('.blog-icon-close')
 let titleExampleProject = document.querySelectorAll('.example h3')
 let titleBlog = document.querySelectorAll('.blog h3')
-
+let resumeTabsBtnBox = document.querySelector('.resume-tabs-btn-box')
+let customerCategoryList = document.querySelector('.category-list')
 
 titleExampleProject.forEach(item => {
   item.addEventListener('click', () => {
@@ -84,5 +85,41 @@ projecticonclose.addEventListener('click', (event) => {
 blogiconclose.addEventListener('click', (event) => {
   event.preventDefault()
   disableTargetItem('modal-blog')
+})
+
+resumeTabsBtnBox.addEventListener('click', (event) => {
+  event.preventDefault()
+  let currentActiveTab = event.target
+
+  if(event.target.tagName == 'A'){
+    let classNameTargetTab = currentActiveTab.dataset.tabname
+    let currentActiveTabContent = document.querySelector(`.${classNameTargetTab}`)
+    let beforeActiveTabBtn = document.querySelector('.resume-tabs-btn-box a.active')
+    let beforeActiveTabContent = document.querySelector('.resume-tab-content.active')
+
+    beforeActiveTabBtn ? beforeActiveTabBtn.classList.remove('active') : null
+    beforeActiveTabContent ? beforeActiveTabContent.classList.remove('active') : null
+
+    currentActiveTab.classList.add('active')
+    currentActiveTabContent.classList.add('active')
+  }
+})
+
+customerCategoryList.addEventListener('click', (event) => {
+  event.preventDefault()
+  let currentActiveTab = event.target.tagName == 'A' ? event.target.parentElement: event.target
+  console.log(currentActiveTab);
+  if(currentActiveTab.tagName == 'LI'){
+    let classNameTargetTab = currentActiveTab.dataset.customertab
+    let currentActiveTabContent = document.querySelector(`.${classNameTargetTab}`)
+    let beforeActiveTabBtn = document.querySelector('.category-list li.active')
+    let beforeActiveTabContent = document.querySelector('.customers-tab.active')
+
+    beforeActiveTabBtn ? beforeActiveTabBtn.classList.remove('active') : null
+    beforeActiveTabContent ? beforeActiveTabContent.classList.remove('active') : null
+
+    currentActiveTab.classList.add('active')
+    currentActiveTabContent.classList.add('active')
+  }
 })
 
