@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     border-bottom: 2px solid var(--color-tertiary);
-
     gap: 4rem;
 }
 
@@ -86,6 +85,8 @@
     color: var(--color-primary);
 }
 
+/* Modal */
+
 .modal-blog {
     width: 100%;
     height: 100%;
@@ -99,12 +100,15 @@
     align-items: center;
     overflow-x: hidden;
     color: var(--color-lightn);
-
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition: var(--transition);
 }
 
 .modal-blog.active{
     opacity: 1;
-    visibility: 1;
+    visibility: visible;
     transform: scale(1);
 }
 
@@ -145,69 +149,13 @@
     align-items: flex-start;
 }
 
-.modal-blog-bottom h2{
-    font-size: 2.5rem;
-}
 
-.form-comment{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-}
-
-.form-comment > div{
-    display: flex;
-    align-items: start;
-    gap: 1rem;
-}
-
-.form-comment-right,
-.form-comment-left{
-    width: calc(50% - 0.5rem);
-}
-
-.form-comment-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.5rem;
-}
-
-
-.input-comment-box input,
-.input-comment-box textarea {
-    background-color: #191b1e;
-    border-radius: 6px;
-    width: 100%;
-    height: 5.5rem;
-    transition: var(--transition);
-    border: 2px solid #191b1e;
-    padding: 1rem 1.5rem;
-    box-shadow: var(--inner-shadow);
-    transition: var(--transition);
-    border-color:  transparent;
-    outline: none;
-}
-
-.input-comment-box textarea{
-    min-height: 20rem;
-}
-
-.input-comment-box input:focus,
-.input-comment-box textarea:focus {
-    background-color: #191b1e;
-    color: var(--color-light);
-    border-color: var(--color-primary);
-    box-shadow: none;
-}
 
 .modal-blog-top figure{
     width: 100%;
     height: 50rem;
     border-radius: 1rem;
     overflow: hidden;
-
 }
 
 .modal-blog-top figure img{
@@ -227,6 +175,7 @@
     font-size: 1.9rem;
     opacity: 0.5;
     text-align: justify;
+    line-height: 3rem;
 }
 
 .modal-blog-text h1{
@@ -290,4 +239,104 @@
 
 .blog-icon-close:hover{
     color: var(--color-primary);
+}
+
+.modal-blog-bottom h2{
+    font-size: 2.5rem;
+}
+
+.form-comment{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.form-comment > div{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.form-comment-right,
+.form-comment-left{
+    width: calc(50% - 0.5rem);
+}
+
+.form-comment-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+
+.input-comment-box input,
+.input-comment-box textarea {
+    background-color: #191b1e;
+    border-radius: 6px;
+    width: 100%;
+    height: 5.5rem;
+    transition: var(--transition);
+    border: 2px solid #191b1e;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--inner-shadow);
+    transition: var(--transition);
+    border-color:  transparent;
+    outline: none;
+}
+
+.input-comment-box textarea{
+    min-height: 20rem;
+}
+
+.input-comment-box input:focus,
+.input-comment-box textarea:focus {
+    background-color: #191b1e;
+    color: var(--color-light);
+    border-color: var(--color-primary);
+    box-shadow: none;
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+   
+    .form-comment > div{
+        flex-direction: column;
+    }
+    .form-comment-right,
+    .form-comment-left{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 48em) {
+    .modal-blog-container{
+        padding: 5rem 2rem;
+    }
+
+    .modal-blog-top figure{
+        height: 35rem;
+    }
+    
+}
+
+@media only screen and (max-width: 37.5em) {
+    .modal-blog-container{
+        padding: 5rem 0;
+    }
+
+    .modal-blog-top figure{
+        height: 25rem;
+    }
+
 }

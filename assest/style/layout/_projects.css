@@ -93,39 +93,46 @@
 .modal-project {
     width: 100%;
     height: 100%;
+    background: #212428;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99999999;
-    background: #212428;
-    padding: 6rem 1.5rem;
+    z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    color: var(--color-lightn);
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
     transform: scale(0);
-    transition: all 0.5s;
+    transition: var(--transition);
 }
 
 .modal-project.active{
     opacity: 1;
-    visibility: 1;
+    visibility: visible;
     transform: scale(1);
 }
 
+.modal-project-container{
+    width: 100%;
+    height: 100%;
+    padding:  10rem;
+    overflow-y: auto;
+}
+
 .modal-project-wrapper {
-    width: 90%;
-    height: auto;
+    position: relative;
+    padding: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
     z-index: 1;
     background: var(--background-color-1);
     box-shadow: var(--shadow-1);
-    border-radius: 1rem;
-    padding: 4.5rem;
     display: flex;
-    gap: 4rem;
-    color: var(--color-lightn);
-    position: relative;
+    gap: 5rem;
 
 }
 
@@ -226,4 +233,41 @@
 
 .project-icon-close:hover{
     color: var(--color-primary);
+}
+
+/* Responsive */
+@media only screen and (max-width: 75em) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 62em) {
+    .modal-project-wrapper {
+        flex-direction: column;
+    }
+
+    .moadl-project-right,
+    .moadl-project-left {
+        width: 100%;
+    }
+
+    .project-description {
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+   
+}
+
+@media only screen and (max-width: 48em) {
+    .modal-project-container{
+        padding: 5rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+
+
 }

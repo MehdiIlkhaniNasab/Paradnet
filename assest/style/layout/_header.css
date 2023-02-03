@@ -91,6 +91,12 @@ header {
     align-items: center;
 }
 
+.social__box-item a svg{
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: currentColor;
+}
+
 .team__skiils-item {
     display: flex;
     justify-content: center;
